@@ -1,6 +1,5 @@
 .container
 {
-    border: 1px solid black;
     width: 900px;
     position: absolute;
     top: 50%;
@@ -21,4 +20,50 @@ button
     background: none;
     border: none;
     font-size: 40px;
+    color: white;
+}
+
+button::before
+{
+    content: '';
+    background: rgb(13, 183, 22);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;  
+}
+
+
+button:hover
+{
+    animation: squish 0.5s;
+}
+
+button:hover::before
+{
+    background: linear-gradient(rgb(99, 61, 124), rgb(226, 132, 215), rgb(28, 215, 232));
+    /*filter:brightness(1); 
+    filter: blur(10px);
+     filter:contrast(15);*/
+}
+
+@keyframes squish
+{
+     0%{
+        transform: scaleY(1);
+     }
+
+     60%{
+        transform: scaleY(1.5);
+     }
+
+     80%{
+        transform: scaleY(0.9);
+     }
+
+     100%{
+        transform: scaleY(1);
+     }
 }
