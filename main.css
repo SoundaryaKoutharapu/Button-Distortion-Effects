@@ -33,6 +33,7 @@ button::before
     z-index: -1;
     top: 0;
     left: 0;  
+    filter: url('#wave');
 }
 
 
@@ -47,6 +48,7 @@ button:hover::before
     /*filter:brightness(1); 
     filter: blur(10px);
      filter:contrast(15);*/
+     filter: url('#wave');
 }
 
 @keyframes squish
